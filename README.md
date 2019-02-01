@@ -8,12 +8,14 @@ composer require calebporzio/awesome-helpers
 
 ## Helpers
 
+
 **carbon**
 
 Shortcut for: `new Carbon` or `Carbon::parse()`
 ``` php
 carbon('One year ago');
 ```
+
 
 **chain**
 
@@ -31,12 +33,14 @@ chain(new Str)->singular('cars')->ucfirst(carry)();
 // a "()" on the end of it. (Thanks to Taylor Otwell for these two additions)
 ```
 
+
 **me**
 
 A shortcut for `auth()->user()`
 ```php
 me()->posts()->create([...]);
 ```
+
 
 **money**
 
@@ -45,12 +49,14 @@ echo money(12.50); // echoes "$12.50"
 // Note: will detect current locale, and use appropriate formating.
 ```
 
+
 **ok**
 
 Shortcut for `response('', 204)`. When you don't have anything to return from an endpoint, but you want to return success.
 ```php
 return ok();
 ```
+
 
 **stopwatch**
 
@@ -61,19 +67,23 @@ stopwatch(function () {
 }); // returns "2.0"
 ```
 
+
 **str_between**
 
 ```php
 str_between('[thing]', '[', ']'); // returns "thing"
 ```
 
+
 **str_match**
 
 Because `preg_match` is annoying.
 ```php
+
 str_match('Jan-1-2019', '/Jan-(.**)-2019/'); // returns "1"
 
 ```
+
 
 **str_validate**
 
@@ -83,11 +93,13 @@ str_validate('calebporzio@aol.com', 'regex:/\.net$/|email|max:10');
 // returns: ["Format is invalid.", "May not be greater than 10 characters."]
 ```
 
+
 **str_wrap**
 
 ```php
 str_wrap('thing', '--'); // returns "--thing--"
 ```
+
 
 **tinker**
 
