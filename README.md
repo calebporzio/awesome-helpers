@@ -45,7 +45,8 @@ me()->posts()->create([...]);
 **money**
 
 ```php
-echo money(12.50); // echoes "$12.50"
+echo money(12); // echoes "$12.00"
+echo money(12.75); // echoes "$12.75"
 // Note: will detect current locale, and use appropriate formating.
 ```
 
