@@ -10,7 +10,7 @@
     "authors": [
         {
             "name": "Caleb Porzio",
-            "email": "calebporzio@gmail.com",
+            "email": "calebporzio@gmail.com"
         }
     ],
     "require": {
@@ -18,7 +18,8 @@
     },
     "require-dev": {
         "illuminate/support": "5.7.*",
-        "phpunit/phpunit": "^7.0"
+        "phpunit/phpunit": "^7.0",
+        "mockery/mockery": "dev-master"
     },
     "autoload": {
         "psr-4": {
