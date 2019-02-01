@@ -38,7 +38,7 @@ chain(new Str)->singular('cars')->ucfirst(carry)();
 
 A shortcut for `auth()->user()`
 ```php
-me()->posts()->create([...]);
+user()->posts()->create([...]);
 ```
 
 

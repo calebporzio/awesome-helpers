@@ -1,6 +1,6 @@
 <?php
 
-function me()
+function user()
 {
     return auth()->user();
 }

@@ -37,10 +37,10 @@ class HelpersTest extends TestCase
     }
 
     /** @test */
-    public function me()
+    public function user()
     {
         // this one is too simple to go through the trouble of testing.
-        $this->assertTrue(function_exists('me'));
+        $this->assertTrue(function_exists('user'));
     }
 
     /** @test */
