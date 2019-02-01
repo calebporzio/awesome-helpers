@@ -72,6 +72,7 @@ stopwatch(function () {
 **str_between**
 
 ```php
+str_between('--thing--', '--'); // returns "thing"
 str_between('[thing]', '[', ']'); // returns "thing"
 ```
 
