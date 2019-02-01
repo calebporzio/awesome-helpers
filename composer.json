@@ -11,7 +11,6 @@
         {
             "name": "Caleb Porzio",
             "email": "calebporzio@gmail.com",
-            "role": "Developer"
         }
     ],
     "require": {
@@ -32,9 +31,7 @@
         }
     },
     "scripts": {
-        "test": "vendor/bin/phpunit",
-        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-
+        "test": "vendor/bin/phpunit"
     },
     "config": {
         "sort-packages": true
@@ -43,10 +40,7 @@
         "laravel": {
             "providers": [
                 "Calebporzio\\AwesomeHelpers\\AwesomeHelpersServiceProvider"
-            ],
-            "aliases": {
-                "Skeleton": "Calebporzio\AwesomeHelpers\\AwesomeHelpersFacade"
-            }
+            ]
         }
     }
 }
