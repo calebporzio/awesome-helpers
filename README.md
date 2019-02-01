@@ -112,5 +112,5 @@ tinker($somethingYouWantToDebug);
 ## Am I missing an awesome helper function?
 Submit a PR or issue with helper functions you use or ideas you have for others!
 
-ttfn,
+TTFN,
 Caleb
