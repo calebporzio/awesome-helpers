@@ -1,0 +1,52 @@
+{
+    "name": "calebporzio/awesome-helpers",
+    "description": "Helper functions I find super-duper handy",
+    "keywords": [
+        "calebporzio",
+        "awesome-helpers"
+    ],
+    "homepage": "https://github.com/calebporzio/awesome-helpers",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Caleb Porzio",
+            "email": "calebporzio@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "illuminate/support": "5.7.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Calebporzio\\AwesomeHelpers\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Calebporzio\\AwesomeHelpers\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Calebporzio\\AwesomeHelpers\\AwesomeHelpersServiceProvider"
+            ],
+            "aliases": {
+                "Skeleton": "Calebporzio\AwesomeHelpers\\AwesomeHelpersFacade"
+            }
+        }
+    }
+}
