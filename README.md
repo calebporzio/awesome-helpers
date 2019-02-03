@@ -112,7 +112,7 @@ tinker($somethingYouWantToDebug);
 ```
 
 ## Am I missing an awesome helper function?
-Submit a PR or issue with helper functions you use or ideas you have for others!
+Submit a PR with helper functions you use or ideas you have for others!
 
 TTFN,
 Caleb
