@@ -46,12 +46,12 @@ class HelpersTest extends TestCase
     /** @test */
     public function money()
     {
-        $this->assertEquals('$12.00', money(12));
-        $this->assertEquals('$12.00', money(12.00));
-        $this->assertEquals('$12.00', money(12.004));
-        $this->assertEquals('$12.01', money(12.005));
-        $this->assertEquals('$1,200.00', money(1200.00));
-        $this->assertEquals('$12', money(12, $showCents = false));
+        $this->assertEquals('$12.00', money(12, true, 'en_US'));
+        $this->assertEquals('$12.00', money(12.00, true, 'en_US'));
+        $this->assertEquals('$12.00', money(12.004, true, 'en_US'));
+        $this->assertEquals('$12.01', money(12.005, true, 'en_US'));
+        $this->assertEquals('$1,200.00', money(1200.00, true, 'en_US'));
+        $this->assertEquals('$12', money(12, $showCents = false, 'en_US'));
     }
 
     /** @test */

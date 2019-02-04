@@ -8,3 +8,4 @@ function str_between($subject, $beginning, $end = null)
 
     return str_before(str_after($subject, $beginning), $end);
 }
+
