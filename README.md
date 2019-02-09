@@ -34,7 +34,7 @@ chain(new Str)->singular('cars')->ucfirst(carry)();
 ```
 
 
-**me**
+**user**
 
 A shortcut for `auth()->user()`
 ```php
@@ -47,7 +47,9 @@ user()->posts()->create([...]);
 ```php
 echo money(12); // echoes "$12.00"
 echo money(12.75); // echoes "$12.75"
-// Note: will detect current locale, and use appropriate formating.
+echo money(12.75, false) // echos "$12"
+echo money(12.75, true, 'en_GB') // echos "£12"
+// Note: unless specified otherwise, money() will detect the current locale.
 ```
 
 

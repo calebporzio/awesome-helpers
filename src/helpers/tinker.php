@@ -34,7 +34,7 @@ function tinker(...$args)
             // ["post", "temp1"]
         })
         ->combine($args)->all();
-        // ["post" => $args[0], "temp1" => $args[1]]
+    // ["post" => $args[0], "temp1" => $args[1]]
 
     sorrynotsorryforusingagoto:
 
