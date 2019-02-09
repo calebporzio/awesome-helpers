@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Carbon;
 
-function carbon(...$args) {
+function carbon(...$args)
+{
     return new Carbon(...$args);
 }
