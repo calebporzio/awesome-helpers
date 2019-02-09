@@ -75,6 +75,8 @@ class HelpersTest extends TestCase
         $this->assertEquals('something',
             str_match('before something after', '/before (.*) after/')
         );
+
+        $this->assertFalse(str_match('hidden', '/found/'));
     }
 
     /** @test */
