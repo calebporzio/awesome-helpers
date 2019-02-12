@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Support\Str;
+
 function str_wrap($value, $cap)
 {
-    return str_start(str_finish($value, $cap), $cap);
+    return Str::wrap($value, $cap);
 }

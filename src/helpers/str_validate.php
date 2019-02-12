@@ -1,21 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 function str_validate($data, $rules)
 {
-    return collect(
-        Validator::make(['{placeholder}' => $data], ['{placeholder}' => $rules])
-            ->errors()
-            ->get('{placeholder}')
-    )->map(function ($message) {
-        return ucfirst(
-            trim(
-                str_replace('The {placeholder}', '',
-                    str_replace('The selected {placeholder}', 'This selection',
-                        $message)
-                )
-            )
-        );
-    });
+    return Str::validate($data, $rules);
 }
