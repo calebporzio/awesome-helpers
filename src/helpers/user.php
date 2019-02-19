@@ -2,9 +2,5 @@
 
 function user($guard = null)
 {
-    if($guard) {
-        return auth($guard)->user();
-    }
-
-    return auth()->user();
+    return is_null($guard) ? auth()->user() : auth($guard)->user();
 }
