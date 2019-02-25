@@ -84,7 +84,7 @@ str_between('[thing]', '[', ']'); // returns "thing"
 Because `preg_match` is annoying.
 ```php
 
-str_match('Jan-1-2019', '/Jan-(.**)-2019/'); // returns "1"
+str_match('Jan-1-2019', '/Jan-(.*)-2019/'); // returns true
 
 ```
 
