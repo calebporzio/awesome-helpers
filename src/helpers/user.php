@@ -1,6 +1,6 @@
 <?php
 
-function user()
+function user($guard = null)
 {
-    return auth()->user();
+    return is_null($guard) ? auth()->user() : auth($guard)->user();
 }
