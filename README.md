@@ -79,12 +79,23 @@ str_between('[thing]', '[', ']'); // returns "thing"
 ```
 
 
-**str_match**
+**str_extract**
 
-Because `preg_match` is annoying.
+Returns capture groups contained in the provided regex pattern.
 ```php
 
-str_match('Jan-1-2019', '/Jan-(.*)-2019/'); // returns true
+str_extract('Jan-01-2019', '/Jan-(.*)-2019/'); // returns "01"
+
+```
+
+
+**str_match**
+
+Checks the provided string agains the provided regex pattern.
+```php
+
+str_match('Jan-01-2019', '/Jan-.*-2019/'); // returns true
+str_match('foo bar baz', 'bar'); // returns true
 
 ```
 
