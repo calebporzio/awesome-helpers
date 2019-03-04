@@ -2,7 +2,9 @@
 
 function str_match($string, $pattern)
 {
-    preg_match($pattern, $string, $matches);
+    if (false === @preg_match($pattern, $string)) {
+	$pattern = '#'.preg_quote($pattern, '#').'#';
+    }
 
-    return $matches[1] ?? false;
+    return 1 === preg_match($pattern, $string);
 }
