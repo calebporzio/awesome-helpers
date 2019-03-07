@@ -70,13 +70,23 @@ class HelpersTest extends TestCase
     }
 
     /** @test */
+    function str_extract()
+    {
+        $this->assertEquals('something', str_extract('before something after', '/before (.*) after/'));
+
+        $this->assertNull(str_extract('before something after', 'other-thing'));
+    }
+
+    /** @test */
     function str_match()
     {
-        $this->assertEquals('something',
-            str_match('before something after', '/before (.*) after/')
-        );
+        $this->assertTrue(str_match('before something after', '/before (.*) after/'));
+
+        $this->assertTrue(str_match('before something after', 'something'));
 
         $this->assertFalse(str_match('hidden', '/found/'));
+
+        $this->assertFalse(str_match('hidden', 'found'));
     }
 
     /** @test */
