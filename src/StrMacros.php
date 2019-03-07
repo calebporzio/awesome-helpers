@@ -21,9 +21,11 @@ class StrMacros
     public function match()
     {
         return function($string, $pattern) {
-            preg_match($pattern, $string, $matches);
+            if (@preg_match($pattern, $string) === false) {
+                $pattern = '#'.preg_quote($pattern, '#').'#';
+            }
 
-            return $matches[1] ?? false;
+            return preg_match($pattern, $string) === 1;
         };
     }
 
