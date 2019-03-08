@@ -11,7 +11,7 @@ class HelpersTest extends TestCase
 {
     use MockeryPHPUnitIntegration;
 
-    public function setUp()
+    protected function setUp()
     {
         (new AwesomeHelpersServiceProvider(null))->boot();
     }
@@ -43,15 +43,25 @@ class HelpersTest extends TestCase
         $this->assertTrue(function_exists('user'));
     }
 
-    /** @test */
-    public function money()
+    /**
+     * @test
+     * @dataProvider moneyProvider
+     */
+    public function money($expected, $input, $showCents, $locale)
     {
-        $this->assertEquals('$12.00', money(12, true, 'en_US'));
-        $this->assertEquals('$12.00', money(12.00, true, 'en_US'));
-        $this->assertEquals('$12.00', money(12.004, true, 'en_US'));
-        $this->assertEquals('$12.01', money(12.005, true, 'en_US'));
-        $this->assertEquals('$1,200.00', money(1200.00, true, 'en_US'));
-        $this->assertEquals('$12', money(12, $showCents = false, 'en_US'));
+        $this->assertEquals($expected, money($input, $showCents, $locale));
+    }
+
+    public function moneyProvider()
+    {
+        return [
+            ['12.00', 12, true, 'en_US'],
+            ['12.00', 12.00, true, 'en_US'],
+            ['12.00', 12.004, true, 'en_US'],
+            ['12.01', 12.005, true, 'en_US'],
+            ['1200.00', 1200.00, true, 'en_US'],
+            ['12', 12, false, 'en_US'],
+        ];
     }
 
     /** @test */
