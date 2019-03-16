@@ -17,7 +17,7 @@
         "php": "^7.1"
     },
     "require-dev": {
-        "illuminate/support": "5.7.*",
+        "illuminate/support": "5.7.*|5.8.*",
         "phpunit/phpunit": "^7.0",
         "mockery/mockery": "dev-master"
     },
