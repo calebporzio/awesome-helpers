@@ -77,6 +77,9 @@ stopwatch(function () {
 ```php
 str_between('--thing--', '--'); // returns "thing"
 str_between('[thing]', '[', ']'); // returns "thing"
+
+Str::between('--thing--', '--'); // returns "thing"
+Str::between('[thing]', '[', ']'); // returns "thing"
 ```
 
 
@@ -98,6 +101,8 @@ Checks the provided string agains the provided regex pattern.
 str_match('Jan-01-2019', '/Jan-.*-2019/'); // returns true
 str_match('foo bar baz', 'bar'); // returns true
 
+Str::match('Jan-1-2019', '/Jan-(.**)-2019/'); // returns "1"
+
 ```
 
 
@@ -107,6 +112,9 @@ A simple way to use validate a string using Laravel's built-in validation system
 ```php
 str_validate('calebporzio@aol.com', 'regex:/\.net$/|email|max:10');
 // returns: ["Format is invalid.", "May not be greater than 10 characters."]
+
+Str::validate('calebporzio@aol.com', 'regex:/\.net$/|email|max:10');
+// returns: ["Format is invalid.", "May not be greater than 10 characters."]
 ```
 
 
@@ -114,6 +122,8 @@ str_validate('calebporzio@aol.com', 'regex:/\.net$/|email|max:10');
 
 ```php
 str_wrap('thing', '--'); // returns "--thing--"
+
+Str::wrap('thing', '--'); // returns "--thing--"
 ```
 
 
