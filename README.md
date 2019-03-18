@@ -1,5 +1,7 @@
 # A collection of awesome helpful functions for Laravel
 
+![Travis CI status image](https://travis-ci.com/calebporzio/awesome-helpers.svg?branch=master)
+
 ## Installation
 
 ```bash
