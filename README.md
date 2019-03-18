@@ -8,7 +8,6 @@ composer require calebporzio/awesome-helpers
 
 ## Helpers
 
-
 **carbon**
 
 Shortcut for: `new Carbon` or `Carbon::parse()`
