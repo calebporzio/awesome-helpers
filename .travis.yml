@@ -10,4 +10,4 @@ matrix:
 install:
   - composer install
 script:
- - ./vendor/bin/phpunit
+  - ./vendor/bin/phpunit
