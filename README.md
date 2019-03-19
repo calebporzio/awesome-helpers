@@ -35,7 +35,7 @@ chain(new Str)->singular('cars')->ucfirst(carry)();
 ```
 
 
-**carbon**
+**faker**
 
 Shortcut for: `$faker = Faker\Factory::create()`
 ``` php
