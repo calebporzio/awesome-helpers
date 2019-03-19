@@ -35,6 +35,15 @@ chain(new Str)->singular('cars')->ucfirst(carry)();
 ```
 
 
+**carbon**
+
+Shortcut for: `$faker = Faker\Factory::create()`
+``` php
+faker()->address; // returns random, fake address
+faker('address'); // alternate syntax
+```
+
+
 **user**
 
 A shortcut for `auth()->user()`

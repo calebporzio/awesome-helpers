@@ -6,6 +6,7 @@ use PHPUnit\Framework\TestCase;
 use Calebporzio\AwesomeHelpers\AwesomeHelpersServiceProvider;
 use Illuminate\Support\Carbon;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
+use Faker\Generator;
 
 class HelpersTest extends TestCase
 {
@@ -34,6 +35,13 @@ class HelpersTest extends TestCase
         $result = chain($mock)->first()->second(carry)->third()();
 
         $this->assertEquals('third thing', $result);
+    }
+
+    /** @test */
+    public function faker()
+    {
+        $this->assertInstanceOf(Generator::class, faker());
+        $this->assertInternalType('string', faker('name'));
     }
 
     /** @test */
