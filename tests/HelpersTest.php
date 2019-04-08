@@ -38,6 +38,13 @@ class HelpersTest extends TestCase
     }
 
     /** @test */
+    function connection()
+    {
+        // this one is too simple to go through the trouble of testing.
+        $this->assertTrue(function_exists('connection'));
+    }
+
+    /** @test */
     public function faker()
     {
         $this->assertInstanceOf(Generator::class, faker());
@@ -77,13 +84,6 @@ class HelpersTest extends TestCase
     {
         // this one is too simple to go through the trouble of testing.
         $this->assertTrue(function_exists('ok'));
-    }
-
-    /** @test */
-    function on_connection()
-    {
-        // this one is too simple to go through the trouble of testing.
-        $this->assertTrue(function_exists('on_connection'));
     }
 
     /** @test */

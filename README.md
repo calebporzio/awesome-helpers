@@ -35,6 +35,17 @@ chain(new Str)->singular('cars')->ucfirst(carry)();
 ```
 
 
+**connection**
+
+Run callback under a different database connection.
+
+```php
+$tenantPostIds = connection('tenantdb', function () {
+    return Post::pluck('id');
+});
+```
+
+
 **faker**
 
 Shortcut for: `$faker = Faker\Factory::create()`
@@ -68,17 +79,6 @@ echo money(12.75, true, 'en_GB') // echos "£12"
 Shortcut for `response('', 204)`. When you don't have anything to return from an endpoint, but you want to return success.
 ```php
 return ok();
-```
-
-
-**on_connection**
-
-Run callback under a different database connection.
-
-```php
-$tenantPostIds = on_connection('tenantdb', function () {
-    return Post::pluck('id');
-});
 ```
 
 
