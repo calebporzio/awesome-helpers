@@ -80,6 +80,13 @@ class HelpersTest extends TestCase
     }
 
     /** @test */
+    function on_connection()
+    {
+        // this one is too simple to go through the trouble of testing.
+        $this->assertTrue(function_exists('on_connection'));
+    }
+
+    /** @test */
     function str_between()
     {
         $this->assertEquals('something',

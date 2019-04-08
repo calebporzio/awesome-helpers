@@ -71,6 +71,17 @@ return ok();
 ```
 
 
+**on_connection**
+
+Run callback under a different database connection.
+
+```php
+$tenantPostIds = on_connection('tenantdb', function () {
+    return Post::pluck('id');
+});
+```
+
+
 **stopwatch**
 
 Returns the amount of time (in seconds) the provided callback took to execute. Useful for debugging and profiling.
