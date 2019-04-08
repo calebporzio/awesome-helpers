@@ -35,6 +35,17 @@ chain(new Str)->singular('cars')->ucfirst(carry)();
 ```
 
 
+**connection**
+
+Run callback under a different database connection.
+
+```php
+$tenantPostIds = connection('tenantdb', function () {
+    return Post::pluck('id');
+});
+```
+
+
 **faker**
 
 Shortcut for: `$faker = Faker\Factory::create()`
