@@ -57,8 +57,8 @@ user()->posts()->create([...]);
 ```php
 echo money(12); // echoes "$12.00"
 echo money(12.75); // echoes "$12.75"
-echo money(12.75, false) // echos "$12"
-echo money(12.75, true, 'en_GB') // echos "£12"
+echo money(12.75, false); // echos "$13"
+echo money(12.75, true, 'en_GB'); // echos "£12.75"
 // Note: unless specified otherwise, money() will detect the current locale.
 ```
 
