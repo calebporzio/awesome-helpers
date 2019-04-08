@@ -40,7 +40,7 @@ class HelpersTest extends TestCase
     /** @test */
     function connection()
     {
-        // this one is too simple to go through the trouble of testing.
+        // This one requires too much bootstrapping to test.
         $this->assertTrue(function_exists('connection'));
     }
 
@@ -54,7 +54,7 @@ class HelpersTest extends TestCase
     /** @test */
     public function user()
     {
-        // this one is too simple to go through the trouble of testing.
+        // This one is too simple to go through the trouble of testing.
         $this->assertTrue(function_exists('user'));
     }
 
@@ -82,7 +82,7 @@ class HelpersTest extends TestCase
     /** @test */
     function ok()
     {
-        // this one is too simple to go through the trouble of testing.
+        // This one is too simple to go through the trouble of testing.
         $this->assertTrue(function_exists('ok'));
     }
 
