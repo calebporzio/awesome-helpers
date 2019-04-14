@@ -29,7 +29,7 @@ class StrMacros
             preg_match($pattern, $string, $matches);
 
             return $matches[1] ?? null;
-        }
+        };
     }
 
     public function match()
