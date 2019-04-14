@@ -14,8 +14,22 @@ class StrMacros
             if (is_null($end)) {
                 $end = $beginning;
             }
+
             return Str::before(Str::after($subject, $beginning), $end);
         };
+    }
+
+    public function extract()
+    {
+        return function ($string, $pattern) {
+            if (@preg_match($pattern, $string) === false) {
+                $pattern = '#'.preg_quote($pattern, '#').'#';
+            }
+
+            preg_match($pattern, $string, $matches);
+
+            return $matches[1] ?? null;
+        }
     }
 
     public function match()
