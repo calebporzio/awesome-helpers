@@ -110,6 +110,8 @@ Returns capture groups contained in the provided regex pattern.
 
 str_extract('Jan-01-2019', '/Jan-(.*)-2019/'); // returns "01"
 
+Str::extract('Jan-01-2019', '/Jan-(.*)-2019/'); // returns "01"
+
 ```
 
 
