@@ -149,6 +149,23 @@ Str::wrap('thing', '--'); // returns "--thing--"
 ```
 
 
+**swap**
+
+This function swaps the values of two variables.
+
+```php
+$startDate = '2040-01-01';
+$endDate = '2020-01-01';
+
+if ($endDate < $startDate) {
+    swap($startDate, $endDate);
+}
+
+echo $startDate; // prints "2020-01-01"
+echo $endDate; // prints "2040-01-01"
+```
+
+
 **tinker**
 
 Kind of like `dd()`, but will open an `artisan tinker` terminal session with the variables you passed in, so you can play around.
