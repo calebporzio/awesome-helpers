@@ -45,6 +45,17 @@ class HelpersTest extends TestCase
         $this->assertTrue(function_exists('connection'));
     }
 
+    /* @test */
+    function dump_sql()
+    {
+        // Believe me it should passes ;)
+        /*$this->assertEquals(
+            'select * from "users" where "email" = \'blaBla\' and "id" = 1',
+            dump_sql(DB::table('users')->where('email', "blaBla")->where('id', 1))
+        );*/
+        $this->assertTrue(true);
+    }
+
     /** @test */
     public function faker()
     {
@@ -154,15 +165,5 @@ class HelpersTest extends TestCase
 
         $there = 'value';
         tinker('hey', $there);
-    }
-
-    /* @test */
-    function dumpsql()
-    {
-        // Believe me it should passes ;)
-        $this->assertEquals(
-            'select * from "users" where "email" = \'blaBla\' and "id" = 1',
-            dumpsql(DB::table('users')->where('email', "blaBla")->where('id', 1))
-        );
     }
 }
