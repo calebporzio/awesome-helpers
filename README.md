@@ -46,6 +46,15 @@ $tenantPostIds = connection('tenantdb', function () {
 ```
 
 
+**dump_sql**
+
+Returns sql query with bindings data.
+```php
+dump_sql(\DB::table('users')->where('email', "blaBla")->where('id', 1)); 
+// returns "select * from `users` where `email` = 'blaBla' and `id` = 1"
+```
+
+
 **faker**
 
 Shortcut for: `$faker = Faker\Factory::create()`

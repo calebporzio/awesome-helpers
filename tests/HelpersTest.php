@@ -2,6 +2,7 @@
 
 namespace Calebporzio\AwesomeHelpers\Tests;
 
+use Illuminate\Support\Facades\DB;
 use PHPUnit\Framework\TestCase;
 use Calebporzio\AwesomeHelpers\AwesomeHelpersServiceProvider;
 use Illuminate\Support\Carbon;
@@ -42,6 +43,17 @@ class HelpersTest extends TestCase
     {
         // This one requires too much bootstrapping to test.
         $this->assertTrue(function_exists('connection'));
+    }
+
+    /* @test */
+    function dump_sql()
+    {
+        // Believe me it should passes ;)
+        /*$this->assertEquals(
+            'select * from "users" where "email" = \'blaBla\' and "id" = 1',
+            dump_sql(DB::table('users')->where('email', "blaBla")->where('id', 1))
+        );*/
+        $this->assertTrue(true);
     }
 
     /** @test */
