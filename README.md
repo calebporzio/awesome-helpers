@@ -132,7 +132,7 @@ Checks the provided string agains the provided regex pattern.
 str_match('Jan-01-2019', '/Jan-.*-2019/'); // returns true
 str_match('foo bar baz', 'bar'); // returns true
 
-Str::match('Jan-1-2019', '/Jan-(.**)-2019/'); // returns "1"
+Str::match('Jan-1-2019', '/Jan-(.*)-2019/'); // returns true
 
 ```
 
