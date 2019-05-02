@@ -150,6 +150,22 @@ class HelpersTest extends TestCase
     }
 
     /** @test */
+    public function toAssoc()
+    {
+        $ordered = collect([
+            ['name', 'John'],
+            ['lastName', 'Doe'],
+        ])->toAssoc();
+
+        $this->assertTrue(
+          collect([
+              'name' => 'something',
+              'lastName' => 'somethingElse',
+          ])->diffKeys($ordered)->count() === 0
+        );
+    }
+
+    /** @test */
     function tinker()
     {
         $mock = \Mockery::mock('overload:'.\Psy\Shell::class);
