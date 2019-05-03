@@ -6,7 +6,7 @@ namespace Calebporzio\AwesomeHelpers;
 
 class CollectionMacros
 {
-    public function toAssoc()
+    public function toAssoc ()
     {
         return function (){
             return $this->reduce(function ($assoc, $keyValuePair) {
