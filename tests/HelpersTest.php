@@ -158,10 +158,12 @@ class HelpersTest extends TestCase
         ])->toAssoc();
 
         $this->assertTrue(
-          collect([
-              'name' => 'something',
-              'lastName' => 'somethingElse',
-          ])->diffKeys($ordered)->count() === 0
+            $ordered->diffAssoc(
+                collect([
+                    'name' => 'John',
+                    'lastName' => 'Doe',
+                ])
+            )->count() === 0
         );
     }
 
