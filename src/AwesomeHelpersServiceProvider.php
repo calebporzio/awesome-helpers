@@ -27,9 +27,11 @@ class AwesomeHelpersServiceProvider extends ServiceProvider
 
             $function = str_before($helperFile, '.php');
 
-            if (! function_exists($function)) {
-                require($path);
+            if (function_exists($function)) {
+                continue;
             }
+
+            require_once $path;
         }
     }
 }
