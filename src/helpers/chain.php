@@ -8,6 +8,8 @@ function chain($object)
     {
         protected $lastReturn = null;
 
+        protected $wrapped = null;
+
         public function __construct($object)
         {
             $this->wrapped = $object;
