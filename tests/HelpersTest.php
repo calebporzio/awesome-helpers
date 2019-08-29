@@ -150,6 +150,18 @@ class HelpersTest extends TestCase
     }
 
     /** @test */
+    function swap()
+    {
+        $a = 1;
+        $b = 2;
+
+        swap($a, $b);
+
+        $this->assertEquals(2, $a);
+        $this->assertEquals(1, $b);
+    }
+
+    /** @test */
     function tinker()
     {
         $mock = \Mockery::mock('overload:'.\Psy\Shell::class);
