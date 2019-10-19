@@ -25,7 +25,7 @@ class AwesomeHelpersServiceProvider extends ServiceProvider
                 continue;
             }
 
-            $function = str_before($helperFile, '.php');
+            $function = Str::before($helperFile, '.php');
 
             if (function_exists($function)) {
                 continue;

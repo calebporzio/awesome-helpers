@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Str;
+
 function tinker(...$args)
 {
     if (empty($args)) {
@@ -22,14 +24,14 @@ function tinker(...$args)
             return file($filePath)[$lineNumber - 1];
             // "    tinker($post, new User);"
         })->map(function ($carry) {
-            return str_before(str_after($carry, 'tinker('), ');');
+            return Str::before(Str::after($carry, 'tinker('), ');');
             // "$post, new User"
         })->flatMap(function ($carry) {
             return array_map('trim', explode(',', $carry));
             // ["post", "new User"]
         })->map(function ($carry, $index) {
             return strpos($carry, '$') === 0
-                ? str_after($carry, '$')
+                ? Str::after($carry, '$')
                 : 'temp' . $index;
             // ["post", "temp1"]
         })
