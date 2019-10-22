@@ -14,7 +14,7 @@ composer require calebporzio/awesome-helpers
 
 Shortcut for: `new Carbon` or `Carbon::parse()`
 ``` php
-carbon('One year ago');
+carbon('1 year ago');
 ```
 
 
