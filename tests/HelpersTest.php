@@ -64,6 +64,38 @@ class HelpersTest extends TestCase
     }
 
     /** @test */
+    public function first()
+    {
+        //Test on primitive types, should return themselves
+        $this->assertNull(first(null));
+        $this->assertTrue(first(true));
+        $this->assertFalse(first(false));
+        $this->assertEquals('', first(''));
+        $this->assertEquals('test-string', first('test-string'));
+        $this->assertEquals(1, first(1));
+
+        //Test on arrays, should return first position
+        $this->assertNull(first([]));
+        $this->assertEquals('1', first(['1', '2', '3']));
+        $this->assertEquals(1, first(['a' => 1, 'b' => 2]));
+        $this->assertEquals(['a' => 1, 'b' => 2], first([['a' => 1, 'b' => 2], ['a' => 3, 'b' => 4]]));
+
+        //Test on StdClass, should return itself if singleDimensional or first position if multiDimensional
+        $singleDimensionalStdClass = (object) ['a' => 1, 'b' => 2];
+        $this->assertEquals($singleDimensionalStdClass, first($singleDimensionalStdClass));
+
+        $multiDimensionalStdClass = (object) [['a' => 1, 'b' => 2], ['a' => 3, 'b' => 4]];
+        $this->assertEquals(['a' => 1, 'b' => 2], first($multiDimensionalStdClass));
+
+        //Test on collections, should return itself if singleDimensional or first position if multiDimensional
+        $singleDimensionalCollection = collect(['a' => 1, 'b' => 2]);
+        $this->assertEquals($singleDimensionalCollection, first($singleDimensionalCollection));
+
+        $multiDimensionalCollection = collect([['a' => 1, 'b' => 2], ['a' => 3, 'b' => 4]]);
+        $this->assertEquals($multiDimensionalCollection[0], first($multiDimensionalCollection));
+    }
+
+    /** @test */
     public function user()
     {
         // This one is too simple to go through the trouble of testing.
