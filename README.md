@@ -50,7 +50,7 @@ $tenantPostIds = connection('tenantdb', function () {
 
 Returns sql query with bindings data.
 ```php
-dump_sql(\DB::table('users')->where('email', "blaBla")->where('id', 1)); 
+dump_sql(\DB::table('users')->where('email', "blaBla")->where('id', 1));
 // returns "select * from `users` where `email` = 'blaBla' and `id` = 1"
 ```
 
@@ -63,6 +63,15 @@ faker()->address; // returns random, fake address
 faker('address'); // alternate syntax
 ```
 
+**first**
+
+Returns first element of arrays, collections, objects or a variable itself if it's a primitive value, similar to `end()`.\
+That's useful to avoid errors when acessing first positions of elements like `$variable[0]`.
+```php
+first('test'); //Returns 'test'
+first(['1', '2', '3']); //Returns '1'
+first([['a' => 1], ['b' => 2]]); //Returns ['a' => 1]
+```
 
 **user**
 
