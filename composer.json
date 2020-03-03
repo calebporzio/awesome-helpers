@@ -18,9 +18,9 @@
     },
     "require-dev": {
         "fzaninotto/faker": "^1.8",
-        "illuminate/support": "5.7.*|5.8.*",
+        "illuminate/support": "5.7.*|5.8.*|^6.0.0|^7.0.0",
         "mockery/mockery": "dev-master",
-        "phpunit/phpunit": "^7.0"
+        "phpunit/phpunit": "^7.0|^8.0"
     },
     "autoload": {
         "psr-4": {
