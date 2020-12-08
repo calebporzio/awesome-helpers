@@ -14,11 +14,11 @@
         }
     ],
     "require": {
-        "php": ">=7.1"
+        "php": ">=7.3"
     },
     "require-dev": {
         "fakerphp/faker": "^1.12",
-        "illuminate/support": "5.7.*|5.8.*|^6.0.0|^7.0.0",
+        "illuminate/support": "5.7.*|5.8.*|^6.0|^7.0|^8.0",
         "mockery/mockery": "dev-master",
         "phpunit/phpunit": "^8.0|^9.0"
     },
