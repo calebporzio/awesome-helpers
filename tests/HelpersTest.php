@@ -13,7 +13,7 @@ class HelpersTest extends TestCase
 {
     use MockeryPHPUnitIntegration;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         (new AwesomeHelpersServiceProvider(null))->boot();
     }
@@ -60,7 +60,7 @@ class HelpersTest extends TestCase
     public function faker()
     {
         $this->assertInstanceOf(Generator::class, faker());
-        $this->assertInternalType('string', faker('name'));
+        $this->assertIsString(faker('name'));
     }
 
     /** @test */
