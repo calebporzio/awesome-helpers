@@ -2,7 +2,5 @@
 
 function swap(&$a, &$b)
 {
-    $temp = $a;
-    $a = $b;
-    $b = $temp;
+    [$b, $a] = [$a, $b];
 }
